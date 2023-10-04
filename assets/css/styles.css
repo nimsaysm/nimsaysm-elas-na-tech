@@ -1,0 +1,222 @@
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,300&family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --gray: #B3C1C2;
+    --gray-darker: #838E8F;
+    --gray-title: #9ca8a9;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+#nav-bar, #Dev, #Projetos, #Tecnologias, #ListaProjetos {
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+h1, h2 {
+    color: var(--gray-title);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+#Dev, #Projetos, #Tecnologias {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+#menu-icon.menu-aberto {
+    transform: rotate(90deg);
+}
+#nav-bar {
+    background-color: var(--gray);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+#nav-bar a, #menu-icon {
+    color: white;
+}
+#nav-bar a:hover, #menu-icon:hover{
+    color: rgb(235, 239, 240);
+    cursor: pointer;
+}
+#links {
+    display: none;
+}
+.link {
+    padding: 0.3rem;
+    font-size: 1.6rem;
+}
+#dev-icon {
+    width: 20rem;
+    margin-bottom: 2rem;
+}
+.info-dev {
+    margin-bottom: 1rem;
+}
+#redes-sociais {
+    display: flex;
+}
+#redes-sociais img {
+    width: 6rem;
+    margin: 1rem;
+}
+#redes-sociais img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#Projetos {
+    display: grid;
+}
+#ListaProjetos {
+    display: grid;
+    text-align: center;
+}
+.projeto,#projeto-selecionado {
+    justify-items: center;
+    background-color: white;
+    filter: drop-shadow(0 0 0.75rem rgb(213, 211, 211));
+    padding: 1rem;
+    margin-bottom: 5rem;
+    width: 33rem;
+}
+.projeto:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.foto-projeto, #foto-projeto {
+    width: 80vw;
+    max-width: 30rem;
+}
+.nome-projeto, #nome-projeto {
+    color: var(--gray-title);
+}
+.desc-projeto, #desc-projeto {
+    color: black;
+    font-weight: 500;
+}
+#mais-projetos {
+    background-color: var(--gray-title);
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 3rem;
+}
+#mais-projetos img {
+    width: 2rem;
+    margin-bottom: -0.4rem;
+    margin-left: 0.5rem;
+}
+#mais-projetos:hover{
+    background-color: var(--gray-darker);
+    cursor: pointer;
+}
+#tecnologias-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.img-tecnologia {
+    width: 5rem;
+    margin-top: 1rem;
+}
+.tecnologia{
+    margin: 1.5rem;
+}
+#InfosProjeto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gray-darker);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    transition: var(--transition);
+    visibility: hidden;
+    z-index: -1000;
+}
+#InfosProjeto.aberto {
+    visibility: visible;
+    z-index: 1000;
+}
+#fechar-btn{
+    font-size: 2.5rem;
+    text-align: right;
+    font-weight: 700;
+    margin-right: 1rem;
+    color: var(--gray);
+    cursor: pointer;
+}
+#fechar-btn:hover {
+    color: var(--gray-darker);
+}
+#projeto-selecionado{
+    height: fit-content;
+}
+#botoes {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    background-color: white;
+    color: var(--gray-darker);
+    font-weight: 700;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    margin: 0.5rem;
+}
+.btn:hover {
+    color: #5f6465;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px){
+    #menu-icon {
+        display: none;
+    }
+    #links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #Projetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #menu-icon {
+        display: none;
+    }
+    #links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #Projetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
