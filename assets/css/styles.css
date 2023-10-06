@@ -18,7 +18,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
 }
-#nav-bar, #Dev, #Projetos, #Tecnologias, #ListaProjetos {
+#nav-bar, #Dev, #Projetos, #Tecnologias, #ListaProjetos, #Contato {
     padding: 1rem;
     margin-bottom: 5rem;
 }
@@ -70,6 +70,7 @@ a {
 }
 #redes-sociais {
     display: flex;
+    justify-content: center;
 }
 #redes-sociais img {
     width: 6rem;
@@ -78,6 +79,9 @@ a {
 #redes-sociais img:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+#Contato {
+    text-align: center;
 }
 #Projetos {
     display: grid;
@@ -109,7 +113,7 @@ a {
     color: black;
     font-weight: 500;
 }
-#mais-projetos {
+#mais-projetos, #btn-contato {
     background-color: var(--gray-title);
     color: white;
     padding: 1rem 3rem;
@@ -123,7 +127,7 @@ a {
     margin-bottom: -0.4rem;
     margin-left: 0.5rem;
 }
-#mais-projetos:hover{
+#mais-projetos:hover, #btn-contato:hover {
     background-color: var(--gray-darker);
     cursor: pointer;
 }
@@ -191,7 +195,25 @@ a {
     color: #5f6465;
     cursor: pointer;
 }
-
+#form {
+    margin: 3rem;
+    padding: 1rem;
+    display: grid;
+}
+#form label {
+    margin-bottom: 1rem;
+}
+#form input, textarea {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    width: 30rem;
+}
+textarea {
+    height: 15rem;
+}
+#form input:focus, textarea:focus {
+    border-color: #838E8F;
+}
 @media only screen and (min-width: 700px) and (max-width: 1200px){
     #menu-icon {
         display: none;
